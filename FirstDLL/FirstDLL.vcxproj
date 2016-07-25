@@ -98,7 +98,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copybatFirstDLL.bat</Command>
+      <Command>xcopy $(SolutionDir)$(Configuration)\FirstDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\
+xcopy $(SolutionDir)$(Configuration)\FirstDLL.dll $(SolutionDir)GraphicalWPF\bin\$(Configuration)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -133,7 +134,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copybatFirstDLL.bat</Command>
+      <Command>xcopy $(SolutionDir)$(Configuration)\FirstDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\
+xcopy $(SolutionDir)$(Configuration)\FirstDLL.dll $(SolutionDir)GraphicalWPF\bin\$(Configuration)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
