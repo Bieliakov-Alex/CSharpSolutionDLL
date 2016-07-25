@@ -1,0 +1,1 @@
+copy .\$(Configuration)\FirstDLL.dll .\ConsoleTest\bin\$(Configuration)\
