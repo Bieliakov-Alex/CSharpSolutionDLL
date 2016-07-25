@@ -95,8 +95,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\
-xcopy $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)GraphicalWPF\bin\$(Configuration)\</Command>
+      <Command>xcopy /y $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\
+xcopy /y $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)GraphicalWPF\bin\$(Configuration)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -131,7 +131,8 @@ xcopy $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)GraphicalWPF\bi
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\</Command>
+      <Command>xcopy /y $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)ConsoleTest\bin\$(Configuration)\
+xcopy /y $(SolutionDir)$(Configuration)\SecondDLL.dll $(SolutionDir)GraphicalWPF\bin\$(Configuration)\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
