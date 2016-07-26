@@ -22,25 +22,27 @@ std::basic_string<TCHAR> ExePath() {
 
 int listOfFiles()
 {
-	std::basic_string<TCHAR> str = ExePath();
 	WIN32_FIND_DATA files;
 	int countOfFiles = 0;
-	str.append(TEXT("\\*.*"));
-	HANDLE hFiles = FindFirstFile(TEXT("C:\\test\\*.txt"), &files);
+	HANDLE hFiles = FindFirstFile(TEXT(".\\*.*"), &files);
 	if (hFiles != INVALID_HANDLE_VALUE)
 	{
 		do
 		{
 			countOfFiles++;
-			cout << files.cFileName << endl;
 		} while (FindNextFile(hFiles, &files));
 	}
 	return countOfFiles;
+
+	/*char buf[100];
+	size_t len = 0;
+	wcstombs_s(&len, buf, 100, files.cFileName, wcslen(files.cFileName));
+	if (len > 0u) buf[len] = '\0';
+	cout << buf << endl;*/
 }
 
-int main() {
-	std::basic_string<TCHAR> str = ExePath();
-	tcout << "my directory is " << str << "\n";
+int main()
+{	
 	listOfFiles();
 	_getch();
 	return 0;

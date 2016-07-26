@@ -9,11 +9,11 @@ namespace ConsoleTest
 {
     class Program
     {
-        [DllImport("MainDLL.dll", EntryPoint = "listOfFiles", CallingConvention = CallingConvention.Cdecl, ExactSpelling = false, CharSet = CharSet.Ansi)]
-        public static extern int listOfFiles();
+        [DllImport("MainDLL.dll", EntryPoint = "countOfFiles", CallingConvention = CallingConvention.Cdecl, ExactSpelling = false, CharSet = CharSet.Ansi)]
+        public static extern int countOfFiles();
         static void Main(string[] args)
         {
-            int result = listOfFiles();
+            int result = countOfFiles();
             Console.WriteLine(result);
             Console.ReadKey();
         }
